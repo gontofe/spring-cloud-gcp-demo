@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo
+  config:
+    import: sm@
+  cloud:
+    gcp:
+      secretmanager:
+        allow-default-secret: true
+server:
+  servlet:
+    context-path: /v1/
+app:
+  config:
+    env1: ${env_var_1:env_var_1_not_present}
+    env2: ${env_var_2:env_var_2_not_present}
+    env3: ${${env_var_3}:env_var_3_not_present}
+    env4: ${${env_var_4}:env_var_4_not_present}
+    env5: ${${env_var_5}:one, two, three, four, five}
