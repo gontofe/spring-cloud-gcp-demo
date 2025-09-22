@@ -22,6 +22,11 @@ public class DemoApplicationController {
                 demoApplicationConfiguration.getEnv2(),
                 demoApplicationConfiguration.getEnv3(),
                 demoApplicationConfiguration.getEnv4(),
-                demoApplicationConfiguration.getEnv5()));
+                demoApplicationConfiguration.getEnv5(),
+                demoApplicationConfiguration.getEnv6(),
+                demoApplicationConfiguration.getEnv7(),
+                demoApplicationConfiguration.getEnv8(),
+                demoApplicationConfiguration.getEnv9(),
+                demoApplicationConfiguration.getEnv10()));
     }
 }

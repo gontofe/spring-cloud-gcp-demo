@@ -1,12 +1,20 @@
+logging:
+  level:
+    com.google.cloud:
+      spring-cloud-context: DEBUG
 spring:
   application:
     name: demo
   config:
-    import: sm@
+    import:
+      - sm@
+      - pm@
   cloud:
     gcp:
       secretmanager:
         allow-default-secret: true
+      parametermanager:
+        allow-default-parameter: true
 server:
   servlet:
     context-path: /v1/
@@ -17,3 +25,8 @@ app:
     env3: ${${env_var_3}:env_var_3_not_present}
     env4: ${${env_var_4}:env_var_4_not_present}
     env5: ${${env_var_5}:one, two, three, four, five}
+    env6: ${env_var_6:env_var_6_not_present}
+    env7: ${env_var_7:env_var_7_not_present}
+    env8: ${${env_var_8}:env_var_8_not_present}
+    env9: ${${env_var_9}:env_var_9_not_present}
+    env10: ${${env_var_10}:six, seven, eight, nine, ten}

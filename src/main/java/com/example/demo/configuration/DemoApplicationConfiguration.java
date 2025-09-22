@@ -20,4 +20,14 @@ public class DemoApplicationConfiguration {
     private String env4;
 
     private List<String> env5;
+
+    private String env6;
+
+    private String env7;
+
+    private String env8;
+
+    private String env9;
+
+    private List<String> env10;
 }
